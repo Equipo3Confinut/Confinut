@@ -1,0 +1,5 @@
+#HELLO.TXT
+
+En esta carpeta irá
+-FUENTES
+-PRUEBAS
