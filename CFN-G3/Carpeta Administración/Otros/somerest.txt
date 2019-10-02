@@ -1,4 +1,0 @@
-#SOMEREST.TXT
-
-En esta carpeta irá
--INFORMES
