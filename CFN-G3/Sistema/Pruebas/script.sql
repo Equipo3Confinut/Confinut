@@ -60,8 +60,10 @@ PRIMARY KEY (`RUT`)) ENGINE = InnoDB;
 
 CREATE TABLE `cfnproducto` 
 ( `ID_Producto` INT(13) NOT NULL AUTO_INCREMENT , 
-`Nombre` VARCHAR(60) NOT NULL , `PrecioNeto` INT NOT NULL , 
-`PrecioFormato` INT NULL , 
+`Nombre` VARCHAR(60) NOT NULL , 
+`PrecioNeto` INT NOT NULL , 
+`PrecioFormato` INT NULL ,
+`Cantidad` INT NOT NULL ,
  FK_categoria INT NOT NULL,
     CONSTRAINT fk_categoria
     FOREIGN KEY (fk_categoria) 
