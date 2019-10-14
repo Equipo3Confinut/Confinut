@@ -48,6 +48,7 @@ CREATE TABLE `cfnusuario`
 `Nombres` VARCHAR(30) NOT NULL , 
 `Apellidos` VARCHAR(30) NOT NULL , 
 `Telefono` VARCHAR(30) NULL , 
+`Email` VARCHAR(254) NOT NULL , /* mails de max. largo 254 caracteres por norma ISO */
  FK_tipousuario INT NOT NULL,
     CONSTRAINT fk_tipousuario
     FOREIGN KEY (fk_tipousuario) 
@@ -60,10 +61,12 @@ PRIMARY KEY (`RUT`)) ENGINE = InnoDB;
 
 CREATE TABLE `cfnproducto` 
 ( `ID_Producto` INT(13) NOT NULL AUTO_INCREMENT , 
-`Nombre` VARCHAR(60) NOT NULL , 
-`PrecioNeto` INT NOT NULL , 
+`Nombre` VARCHAR(60) NOT NULL , `PrecioNeto` INT NOT NULL , 
 `PrecioFormato` INT NULL ,
 `Cantidad` INT NOT NULL ,
+`PrecioMinorista` INT NULL , 
+`PrecioMayorista` INT NULL ,
+`Disponibilidad` VARCHAR(3) DEFAULT 'SI' , 
  FK_categoria INT NOT NULL,
     CONSTRAINT fk_categoria
     FOREIGN KEY (fk_categoria) 
