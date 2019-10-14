@@ -92,7 +92,7 @@ PRIMARY KEY (`ID_Pedido`)) ENGINE = InnoDB;
 CREATE TABLE `cfncarritocompras` 
 ( `ID_CarritoCompras` INT NOT NULL AUTO_INCREMENT , 
 `Detalle` VARCHAR(300) NULL ,
-FK_Rut INT NOT NULL,
+FK_Rut VARCHAR(13) NOT NULL,
     CONSTRAINT fk_Rut
     FOREIGN KEY (fk_Rut) 
         REFERENCES CFNUsuario(RUT),
